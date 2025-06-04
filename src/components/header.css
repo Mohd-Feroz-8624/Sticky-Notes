@@ -8,6 +8,7 @@
   /* border:solid; */
   display: flex;
   justify-content: space-between;
+  height: 60px;
 }
 
 .notes {
@@ -17,6 +18,7 @@
   margin-top: 15px;
   margin-left: 30px;
   width: fit-content;
+  cursor: pointer;
   /* border: solid; */
   display: flex;
   align-items: center;

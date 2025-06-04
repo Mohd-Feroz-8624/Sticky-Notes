@@ -1,29 +1,46 @@
-
+import { NewNote } from './NewNote'
+import { useState } from 'react'
 import './header.css'
 export function Header() {
-
+  const [token, setToken] = useState(true)
   return (
     <>
       <div className="header">
-        <h2 className='notes'>Notes</h2>
-        <div className='search-container'>
+        <h2 className='notes' onClick={()=>{
+          setToken(true)
+        }}>Notes</h2>
+        <div >
+          {
+            token
+              ?
+              <div className='search-container'>
+                <input type="text" className="search" placeholder="Search Notes.." />
 
-          <input type="text" className="search" placeholder="Search Notes.." />
+                <img src="src/assets/searchIcon.png" alt="" className='icon'
+                  onClick={() => {
 
-          <img src="src/assets/searchIcon.png" alt="" className='icon'
-            onClick={() => {
-
-            }} />
-
+                  }} />
+              </div>
+              : <div></div>
+          }
         </div>
-        <div className='create-button'onClick={()=>{
-          
+        <div onClick={() => {
+          setToken(false)
+          NewNote();
         }}>
-
-          <p>Create  Note </p>
+          {
+            token
+              ? <p className='create-button'>Create Note </p>
+              : <div></div>
+          }
         </div>
       </div>
       <hr />
+      {
+        token
+          ? <div></div>
+          : <NewNote />
+      }
     </>
   )
 }
