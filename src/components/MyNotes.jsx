@@ -76,7 +76,7 @@ export function MyNotes() {
           </div>
         </div>
         <div>
-          <a href='/Sticky-Notes/newNote' className='create-button'>Create Note</a>
+          <a href='/newNote' className='create-button'>Create Note</a>
         </div>
       </div>
       <hr />
