@@ -36,7 +36,7 @@ export function NewNote() {
             setNote(e.target.value)
           }}></textarea>
         </label>
-        <a href="/display" className="save-text" onClick={handleSubmit}>Save</a>
+        <a href="/" className="save-text" onClick={handleSubmit}>Save</a>
         <a href="/" className="back-text">Back</a>
       </div>
     </div>
