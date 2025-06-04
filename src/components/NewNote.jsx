@@ -1,7 +1,6 @@
 import { useState } from "react";
 import './newNote.css'
-import { HomePage } from "./HomePage";
-import { MyNotes } from "./MyNotes";
+
 
 export function NewNote() {
   const [title, setTitle] = useState("");
@@ -38,7 +37,7 @@ export function NewNote() {
           }}></textarea>
         </label>
         <a href="/display" className="save-text" onClick={handleSubmit}>Save</a>
-
+        <a href="/" className="back-text">Back</a>
       </div>
     </div>
   )
