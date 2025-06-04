@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import './myNotes.css';
 import searchImg from "../assets/searchIcon.png"
-
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export function MyNotes() {
+  const navigate = useNavigate()
   const [notes, setNotes] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedTitle, setEditedTitle] = useState("");
@@ -76,7 +77,7 @@ export function MyNotes() {
           </div>
         </div>
         <div>
-          <a href='/newNote' className='create-button'>Create Note</a>
+          <button onClick={() => navigate('newNote')} className='create-button'>Create Note</button>
         </div>
       </div>
       <hr />
