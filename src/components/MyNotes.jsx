@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './myNotes.css';
+import searchImg from "../assets/searchIcon.png"
 
 
 export function MyNotes() {
@@ -71,11 +72,11 @@ export function MyNotes() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)} // Update search query
             />
-            <img src="src/assets/searchIcon.png" alt="" className='icon' />
+            <img src={searchImg} alt="" className='icon' />
           </div>
         </div>
         <div>
-          <a href='/newNote' className='create-button'>Create Note</a>
+          <a href='/Sticky-Notes/newNote' className='create-button'>Create Note</a>
         </div>
       </div>
       <hr />
