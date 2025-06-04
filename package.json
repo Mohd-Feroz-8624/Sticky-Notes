@@ -1,6 +1,7 @@
 {
   "name": "notes",
-  "private": true,
+  "private": "false",
+  "homepage": "https://Mohd-Feroz-8624.github.io/Sticky-Notes",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,7 +9,7 @@
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "lint": "eslint .",
+    "lint": "eslint src --ext js, jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
