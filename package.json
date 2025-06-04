@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -30,11 +32,6 @@
     "postcss": "^8.5.4",
     "tailwindcss": "^4.1.8",
     "vite": "^6.3.5"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build":"vite build",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist"
   }
+ 
 }
