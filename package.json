@@ -1,7 +1,7 @@
 {
   "name": "notes",
-  "private": "false",
   "homepage": "https://Mohd-Feroz-8624.github.io/Sticky-Notes",
+  "private": "false",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
