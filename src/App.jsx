@@ -10,8 +10,8 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/display' element={<HomePage />} />
-        <Route path='/newNote' element={<NewNote />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='newNote' element={<NewNote />} />
 
       </Routes>
 
