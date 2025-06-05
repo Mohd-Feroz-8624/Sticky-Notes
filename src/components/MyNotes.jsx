@@ -9,29 +9,29 @@ export function MyNotes() {
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedTitle, setEditedTitle] = useState("");
   const [editedContent, setEditedContent] = useState("");
-  const [searchQuery, setSearchQuery] = useState(""); // New state for search query
+  const [searchQuery, setSearchQuery] = useState(""); 
 
-  // Load notes from localStorage
+  
   useEffect(() => {
     const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
     setNotes(storedNotes);
   }, []);
 
-  // Delete note by index
+  
   const handleDelete = (index) => {
     const updatedNotes = notes.filter((_, i) => i !== index);
     setNotes(updatedNotes);
     localStorage.setItem("notes", JSON.stringify(updatedNotes));
   };
 
-  // Start editing a note
+
   const handleEdit = (index) => {
     setEditingIndex(index);
     setEditedTitle(notes[index].title);
     setEditedContent(notes[index].content);
   };
 
-  // Save the edited note
+  
   const handleSaveEdit = () => {
     const updatedNotes = [...notes];
     updatedNotes[editingIndex] = {
@@ -46,14 +46,14 @@ export function MyNotes() {
     setEditedContent("");
   };
 
-  // Cancel editing
+  
   const handleCancelEdit = () => {
     setEditingIndex(null);
     setEditedTitle("");
     setEditedContent("");
   };
 
-  // Filter notes based on search query
+  
   const filteredNotes = notes.filter((note) =>
     note.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -71,7 +71,7 @@ export function MyNotes() {
               className="search"
               placeholder="Search Notes..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)} // Update search query
+              onChange={(e) => setSearchQuery(e.target.value)} 
             />
             <img src={searchImg} alt="" className='icon' />
           </div>

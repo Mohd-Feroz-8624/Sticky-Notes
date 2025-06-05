@@ -1,31 +1,27 @@
-/* Reset default styles for consistency across browsers */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* Ensures padding and borders are included in element size */
+
 }
 
-/* Header styles */
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
   padding: 0 2vw;
-  /* Relative padding for responsiveness */
   width: 100%;
   max-width: 1200px;
-  /* Max width for large screens */
   margin: 0 auto;
-  /* Center the header */
+
 }
 
-/* Notes link/logo */
+
 .notes {
   text-decoration: none;
   font-size: clamp(1.5rem, 5vw, 2rem);
-  /* Responsive font size */
   margin-left: 2vw;
   width: fit-content;
   cursor: pointer;
@@ -35,36 +31,31 @@
   justify-content: center;
 }
 
-/* Remove background on active state for better UX */
+
 .notes:active {
   background-color: transparent;
 }
 
-/* Search container */
 .search-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 60px;
   width: clamp(200px, 30vw, 300px);
-  /* Responsive width */
   position: relative;
 }
 
-/* Search input */
 .search {
   height: 2.5rem;
-  /* Relative height */
   font-size: clamp(0.9rem, 2vw, 1rem);
   width: 80%;
   padding: 0.5rem;
   border: 1px solid #ccc;
-  /* Lighter grey for better contrast */
   border-radius: 5px;
-  /* Subtle rounding */
+
 }
 
-/* Search icon */
+
 .icon {
   cursor: pointer;
   width: 2.5rem;
@@ -74,7 +65,7 @@
   padding: 0.3rem;
 }
 
-/* Create button */
+
 .create-button {
   text-decoration: none;
   display: flex;
@@ -90,30 +81,27 @@
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* Smooth hover effect */
+
 }
 
 .create-button:hover {
   background-color: #333;
-  /* Subtle hover state */
+
 }
 
-/* Content container */
 .content {
   display: flex;
   flex-wrap: wrap;
-  /* Allow cards to wrap on smaller screens */
   justify-content: center;
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Note card */
+
 .note-card {
   border: 1px solid #ccc;
   width: clamp(250px, 45vw, 350px);
-  /* Responsive width */
   margin: 1rem;
   height: fit-content;
   display: flex;
@@ -122,34 +110,30 @@
   padding: 1rem;
   gap: 0.5rem;
   border-radius: 8px;
-  /* Rounded corners for modern look */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
+
 }
 
-/* Note title */
+
 .title {
   color: red;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: bold;
 }
 
-/* Buttons container */
+
 .buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  /* Allow buttons to wrap on small screens */
   justify-content: center;
 }
 
-/* Edit and Save buttons */
 .edit,
 .save {
   padding: 0.5rem 2rem;
   color: #fff;
   background-color: #28a745;
-  /* Standard green */
   border: none;
   border-radius: 5px;
   letter-spacing: 0.05rem;
@@ -161,16 +145,15 @@
 .edit:hover,
 .save:hover {
   background-color: #218838;
-  /* Darker green on hover */
+
 }
 
-/* Delete and Cancel buttons */
+
 .delete,
 .cancel {
   padding: 0.5rem 2rem;
   color: #fff;
   background-color: #dc3545;
-  /* Standard red */
   border: none;
   border-radius: 5px;
   letter-spacing: 0.05rem;
@@ -182,17 +165,17 @@
 .delete:hover,
 .cancel:hover {
   background-color: #c82333;
-  /* Darker red on hover */
+
 }
 
-/* Editable title */
+
 .edit-title {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* Editable note input */
+
 .edit-Note {
   width: 100%;
   font-size: clamp(0.9rem, 2.5vw, 1rem);
@@ -201,8 +184,8 @@
   border-radius: 5px;
 }
 
-/* Media Queries for smaller screens */
- @media (max-width: 768px) {
+
+@media (max-width: 768px) {
   .header {
     flex-direction: column;
     height: auto;
@@ -237,9 +220,9 @@
     width: clamp(200px, 80vw, 300px);
     margin: 0.5rem;
   }
-} 
+}
 
- @media (max-width: 480px) {
+@media (max-width: 480px) {
   .notes {
     font-size: clamp(1rem, 3.5vw, 1.2rem);
   }
@@ -267,4 +250,4 @@
     padding: 0.4rem 1.5rem;
     font-size: 0.7rem;
   }
-} 
+}
