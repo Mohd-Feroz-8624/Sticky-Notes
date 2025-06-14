@@ -84,7 +84,7 @@ export function MyNotes() {
 
       <div className="content">
         {filteredNotes.length === 0 ? (
-          <p>No notes found</p>
+          <p>create a Note First</p>
         ) : (
           filteredNotes.map((note, index) => (
             <div key={index} className="note-card">
