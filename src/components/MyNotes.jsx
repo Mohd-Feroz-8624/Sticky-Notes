@@ -9,15 +9,15 @@ export function MyNotes() {
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedTitle, setEditedTitle] = useState("");
   const [editedContent, setEditedContent] = useState("");
-  const [searchQuery, setSearchQuery] = useState(""); 
+  const [searchQuery, setSearchQuery] = useState("");
 
-  
+
   useEffect(() => {
     const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
     setNotes(storedNotes);
   }, []);
 
-  
+
   const handleDelete = (index) => {
     const updatedNotes = notes.filter((_, i) => i !== index);
     setNotes(updatedNotes);
@@ -31,7 +31,7 @@ export function MyNotes() {
     setEditedContent(notes[index].content);
   };
 
-  
+
   const handleSaveEdit = () => {
     const updatedNotes = [...notes];
     updatedNotes[editingIndex] = {
@@ -46,14 +46,14 @@ export function MyNotes() {
     setEditedContent("");
   };
 
-  
+
   const handleCancelEdit = () => {
     setEditingIndex(null);
     setEditedTitle("");
     setEditedContent("");
   };
 
-  
+
   const filteredNotes = notes.filter((note) =>
     note.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -71,7 +71,7 @@ export function MyNotes() {
               className="search"
               placeholder="Search Notes..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)} 
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
             <img src={searchImg} alt="" className='icon' />
           </div>
@@ -84,7 +84,11 @@ export function MyNotes() {
 
       <div className="content">
         {filteredNotes.length === 0 ? (
-          <p>create a Note First</p>
+          <p><b>
+
+            Nothing here yet. Add one to get started!
+          </b>
+          </p>
         ) : (
           filteredNotes.map((note, index) => (
             <div key={index} className="note-card">
